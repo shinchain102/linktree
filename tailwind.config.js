@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        ivyora: ['ivyora', 'serif'], // Define Ivyora as a custom font
+        ivyora: ['ivyora-display', 'serif'], // Define Ivyora as a custom font
       },
     },
   },
