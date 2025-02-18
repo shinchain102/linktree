@@ -78,7 +78,7 @@ function App() {
             <div className="relative">
               <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-[#80002030] transform hover:scale-105 transition-transform duration-500">
                 <img
-                  src="/home/project/Img/logo.jpg"
+                  src="/Img/logo/logo.jpg"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
