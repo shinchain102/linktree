@@ -111,7 +111,7 @@ function App() {
           {/* Product Carousel */}
           <div className="relative glass-effect rounded-xl p-6">
             <h2 className="text-2xl font-bold text-[#222831] mb-6 text-center">Featured Collection</h2>
-            <div className="relative overflow-hidden rounded-lg aspect-video">
+            <div className="relative overflow-hidden rounded-lg aspect-square">
               <a href={products[currentSlide].link} className="block group">
                 <img
                   src={products[currentSlide].image}
