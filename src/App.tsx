@@ -56,8 +56,18 @@ const products = [
 ];
 
 function App() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % products.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + products.length) % products.length);
+  };
+
   return (
-    <div className="min-h-screen bg-[#F8EDE3] relative overflow-hidden font-['ivyora-text']">
+    <div className="min-h-screen bg-[#F8EDE3] relative overflow-hidden">
       {/* Decorative Elements */}
       <div className="fixed inset-0 luxury-pattern opacity-50"></div>
       
@@ -68,7 +78,7 @@ function App() {
             <div className="relative">
               <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-4 border-[#80002030] transform hover:scale-105 transition-transform duration-500">
                 <img
-                  src="https://raw.githubusercontent.com/shinchain102/linktree/refs/heads/main/Img/logo.jpg"
+                  src="/Img/logo.jpg"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
@@ -77,20 +87,31 @@ function App() {
                 @Pitriciacle.com_
               </div>
             </div>
-            <h1 className="text-3xl font-bold text-[#222831] mt-6 mb-2 font-['ivyora-display']">Pitriciacle</h1>
-            <p className="text-[#222831] opacity-75 max-w-xs mx-auto font-['ivyora-text']">Digital Creator & Lifestyle Influencer</p>
+            <h1 className="text-3xl font-bold text-[#222831] mt-6 mb-2">Pitriciacle</h1>
+            <p className="text-[#222831] opacity-75 max-w-xs mx-auto">Digital Creator & Lifestyle Influencer</p>
           </div>
-        </div>
-      </div>
-    </div>
-  );
-}
 
+          {/* Social Links */}
+          <div className="space-y-4 relative">
+            {socialLinks.map((link, index) => (
+              <a
+                key={link.name}
+                href={link.url}
+                className="group flex items-center justify-center gap-3 p-4 rounded-lg glass-effect hover:bg-[#DAD4B5]/50 transition-all duration-500 text-[#222831] font-medium transform hover:-translate-y-0.5"
+                style={{ transitionDelay: `${index * 50}ms` }}
+              >
+                <span className="transform group-hover:scale-110 transition-transform duration-500">
+                  {link.icon}
+                </span>
+                <span className="text-lg">{link.name}</span>
+              </a>
+            ))}
+          </div>
 
           {/* Product Carousel */}
           <div className="relative glass-effect rounded-xl p-6">
             <h2 className="text-2xl font-bold text-[#222831] mb-6 text-center">Featured Collection</h2>
-            <div className="relative overflow-hidden rounded-lg aspect-square">
+            <div className="relative overflow-hidden rounded-lg aspect-video">
               <a href={products[currentSlide].link} className="block group">
                 <img
                   src={products[currentSlide].image}
