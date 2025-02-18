@@ -29,7 +29,7 @@ const socialLinks = [
   },
   {
     name: 'Website',
-    url: 'https://pitriciacle.com/',
+    url: 'https://pitriciacle.com/?utm_source=Instagram&utm_medium=Organic&utm_campaign=linktree_page',
     icon: <Globe className="w-6 h-6" />,
   },
 ];
