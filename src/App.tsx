@@ -88,7 +88,7 @@ function App() {
               </div>
             </div>
             <h1 className="text-3xl font-bold text-[#222831] mt-6 mb-2">Pitriciacle</h1>
-            <p className="text-[#222831] opacity-75 max-w-xs mx-auto">Digital Creator & Lifestyle Influencer</p>
+            <p className="text-[#222831] opacity-75 max-w-xs mx-auto">Where Elegance Meets You!</p>
           </div>
 
           {/* Social Links */}
